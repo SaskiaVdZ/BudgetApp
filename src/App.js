@@ -3,15 +3,24 @@ import Illustration from "./Images/Illustration.gif";
 import './App.css';
 import { Typography, Container } from '@mui/material';
 import InputForm from "./Components/InputForm"
+import List from "./Components/List"
 
 
 function App() {
+//State to hold the transactions
+  const [transactions, setTransactions]= useState([]);
+//Function to add a new transaction
+  const addTransaction = (newTransaction) => {
+    setTransactions([...transactions, newTransaction]);
+  };
+
   return (
     <Container align="center" overflow="hidden" sx={{ mt: 6, mb: 6 }}>
     <Typography variant="h3" >Budget Meditation</Typography>
     <img src={ Illustration }></img>
    <Typography variant="subtitle1">Illustration: Dazzle Line by Anna Żołnierowicz</Typography>
-   <InputForm/>
+   <InputForm addTransaction={addTransaction}/>
+   <List transactions={transactions} />
    </Container>
   );
 }
