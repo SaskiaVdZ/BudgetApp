@@ -49,9 +49,9 @@ function InputForm({ addTransaction }) {
           name="radio-buttons-group"
           row
         >
-          <FormControlLabel value="Income" control={<Radio />} label="Income" />
+          <FormControlLabel value="income" control={<Radio />} label="Income" />
           <FormControlLabel
-            value="Expense"
+            value="expense"
             control={<Radio />}
             label="Expense"
           />

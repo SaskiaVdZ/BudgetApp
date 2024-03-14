@@ -18,7 +18,7 @@ function App() {
   return (
     <Container align="center" overflow="hidden" sx={{ mt: 6, mb: 6 }}>
     <Typography variant="h3" >Budget Meditation</Typography>
-    <img src={ Illustration }></img>
+    <img src={ Illustration } alt="Woman meditating and floating above the ground with coins around her "></img>
    <Typography variant="subtitle1" fontSize={10}>Illustration: Dazzle Line by Anna Żołnierowicz</Typography>
    <InputForm addTransaction={addTransaction}/>
    <Listing transactions={transactions} />

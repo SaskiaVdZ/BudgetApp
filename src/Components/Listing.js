@@ -19,7 +19,7 @@ function Listing({ transactions }) {
             <List>
             {transactions?.map((transaction, index) => (
                //the question mark checks if there are transactions/input before it maps
-                <ListItem key={index}>{transaction.description}: {transaction.type === 'income' ? '+' : '-'}{transaction.amount}
+                <ListItem key={index}>{transaction.description}: {transaction.type === 'income' ? '+' : '-'} {transaction.amount},-
                   <ListItemIcon>
                   <DeleteIcon />
                   </ListItemIcon>
