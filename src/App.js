@@ -4,6 +4,7 @@ import './App.css';
 import { Typography, Container } from '@mui/material';
 import InputForm from "./Components/InputForm"
 import Listing from "./Components/Listing"
+import Summary from "./Components/Summary"
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
    <Typography variant="subtitle1" fontSize={10}>Illustration: Dazzle Line by Anna Żołnierowicz</Typography>
    <InputForm addTransaction={addTransaction}/>
    <Listing transactions={transactions} />
+   <Summary transactions={transactions} />
    </Container>
   );
 }

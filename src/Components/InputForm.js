@@ -18,7 +18,7 @@ function InputForm({ addTransaction }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     addTransaction({ description, amount: parseFloat(amount), type });
-    setDescription("");
+    setDescription('');
     setAmount(0);
   };
 
