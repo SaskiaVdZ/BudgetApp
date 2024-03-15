@@ -1,8 +1,8 @@
 import React from 'react';
-import { Typography, Grid, ListItem, ListItemIcon, ListItemText, List } from '@mui/material';
+import { Typography, Grid, ListItem, ListItemIcon, ListItemText, List, useThemeProps } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 
-function Listing({ transactions }) {
+function Listing({ transactions, deleteTransaction }) {
  
    
 
@@ -19,9 +19,9 @@ function Listing({ transactions }) {
             <List>
             {transactions?.map((transaction, index) => (
                //the question mark checks if there are transactions/input before it maps
-                <ListItem key={index}>{transaction.description}: {transaction.type === 'income' ? '+' : '-'} {transaction.amount},-
+                <ListItem key={index}>{transaction.description}: {transaction.type === 'income' ? '+' : '-'} {transaction.amount} ,-
                   <ListItemIcon>
-                  <DeleteIcon />
+                  <DeleteIcon onClick={() => deleteTransaction(transaction)}/>
                   </ListItemIcon>
                   <ListItemText >
                 </ListItemText>
