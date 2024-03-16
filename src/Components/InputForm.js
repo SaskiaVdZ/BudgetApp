@@ -9,6 +9,7 @@ import {
   Radio,
   TextField
 } from "@mui/material";
+import AddIcon from '@mui/icons-material/Add';
 
 function InputForm({ addTransaction }) {
   const [description, setDescription] = useState("");
@@ -47,7 +48,9 @@ function InputForm({ addTransaction }) {
           value={type}
           onChange={(e) => setType(e.target.value)}
           name="radio-buttons-group"
-          row
+          row 
+          sx={{ mt: 2, mb: 2 }}
+          style={{ display: 'flex', justifyContent: 'center' }}
         >
           <FormControlLabel value="income" control={<Radio />} label="Income" />
           <FormControlLabel
@@ -56,7 +59,7 @@ function InputForm({ addTransaction }) {
             label="Expense"
           />
         </RadioGroup>
-        <Button type="submit" variant="outlined">Add</Button>
+        <Button type="submit" variant="outlined">Add<AddIcon/></Button>
       </form>
     </Grid>
   );

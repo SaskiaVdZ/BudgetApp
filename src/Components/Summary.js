@@ -1,4 +1,5 @@
 import React from 'react';
+import { Typography, Grid, ListItem, ListItemText, List } from '@mui/material';
 
 function Summary({ transactions }) {
     
@@ -12,14 +13,23 @@ const balance = income - expenses;
 
     
       return (
-        <div>
-            <p>Total income: { income },- </p>
-            <p>Total expenses: { expenses },- </p>
-            <p>Balance: { balance },- </p>
-        </div>
-      
+       <>
+      <Grid container  
+            direction="column"
+            justifyContent="baseline"
+            alignItems="stretch"
+            sx={{maxWidth: 'md'}}>
+        <Grid item xs={12} md={6}>
+        <List style={{ display: 'flex', justifyContent: 'center', alignItems:'stretch' }}>
+          <ListItem sx={{bgcolor: '#f4f1eb', borderRadius: '10px', maxWidth: 'md', alignItems:'flex-start'}}><ListItemText>Total income: { income },- </ListItemText></ListItem>
+          <ListItem sx={{bgcolor: '#f4f1eb', borderRadius: '10px', maxWidth: 'md', alignItems:'flex-start'}}><ListItemText>Total expenses: { expenses },- </ListItemText></ListItem>
+          <ListItem sx={{bgcolor: '#ebeef4', borderRadius: '10px', maxWidth: 'md', alignItems:'flex-start'}}><ListItemText>Balance: { balance },- </ListItemText></ListItem>
+        </List>
+        </Grid>
+      </Grid>
+      </>
       );
-    
-    }
+}
+
     
     export default Summary;
