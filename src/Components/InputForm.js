@@ -58,9 +58,10 @@ function InputForm({ addTransaction }) {
             control={<Radio />}
             label="Expense"
           />
+        
+        <Button type="submit" variant="contained" sx={{ mt: 1, mb: 1 }} >Add<AddIcon/></Button>
         </RadioGroup>
-        <Button type="submit" variant="outlined">Add<AddIcon/></Button>
-      </form>
+        </form>
     </Grid>
   );
 }

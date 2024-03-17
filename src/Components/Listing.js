@@ -2,6 +2,7 @@ import React from 'react';
 import { Typography, Grid, ListItem, ListItemText, List } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Divider from '@mui/material/Divider';
+import Favicon from "../Images/Favicon.gif";
 
 function Listing({ transactions, deleteTransaction }) {
  
@@ -14,7 +15,8 @@ function Listing({ transactions, deleteTransaction }) {
     justifyContent="center"
     alignItems="stretch">
         <Grid item xs={12} md={6}>
-          <Typography sx={{ mt: 4, mb: 2 }} variant="h6" component="div" color="primary">
+        <img className="calc" src={ Favicon } width={40}/>
+          <Typography sx={{ mt: 1, mb: 2 }} variant="h6" component="div" color="primary">
             Income & expenses
           </Typography>
             <List>
