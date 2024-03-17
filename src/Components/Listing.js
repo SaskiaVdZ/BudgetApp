@@ -15,10 +15,11 @@ function Listing({ transactions, deleteTransaction }) {
     justifyContent="center"
     alignItems="stretch">
         <Grid item xs={12} md={6}>
-        <img className="calc" src={ Favicon } width={40}/>
+        
           <Typography sx={{ mt: 1, mb: 2 }} variant="h6" component="div" color="primary">
             Income & expenses
           </Typography>
+          <img className="calc" src={ Favicon } width={70}/>
             <List>
             {transactions?.map((transaction, index) => (
                //the question mark checks if there are transactions/input before it maps
