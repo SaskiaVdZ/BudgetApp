@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Illustration from "./Images/Illustration.gif";
-import Favicon from "./Images/Favicon.gif";
 import './App.css';
 import { Typography, Container } from '@mui/material';
 import InputForm from "./Components/InputForm"
