@@ -19,7 +19,7 @@ function Listing({ transactions, deleteTransaction }) {
           <Typography sx={{ mt: 1, mb: 2 }} variant="h6" component="div" color="primary">
             Income & expenses
           </Typography>
-          <img className="calc" src={ Favicon } width={70}/>
+          <img className="calc" src={ Favicon } width={70} alt="an illustration of a calculator"/>
             <List>
             {transactions?.map((transaction, index) => (
                //the question mark checks if there are transactions/input before it maps
